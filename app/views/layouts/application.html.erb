@@ -11,12 +11,21 @@
   </head>
 
   <body>
+    <%# Devise alerts %>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+
+    <% if current_user %>
+      <%= button_to("Logout", destroy_user_session_path, method: :delete) %>
+    <% else %>
+      <%= link_to "Register", new_user_registration_path  %>
+      <%= link_to "Login", new_user_session_path  %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
