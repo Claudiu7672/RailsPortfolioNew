@@ -73,3 +73,6 @@ end
 
 # Authentication
 gem "devise", "~> 4.8", ">= 4.8.1"
+
+# Slugging and permalink plugin for Active Record. It lets you create pretty URLs and work with human-friendly strings as if they were numeric ids.
+gem "friendly_id", "~> 5.4", ">= 5.4.2"
