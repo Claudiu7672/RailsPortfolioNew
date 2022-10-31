@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :portfolios
+  resources :blogs
   devise_scope :user do
     # Redirests signing out users back to sign-in
     get "users", to: "devise/sessions#new"
